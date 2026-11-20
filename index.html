@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111216">
+  <title>MOVEFORM — Activewear | VYB Concept Catalog</title>
+  <meta name="description" content="Explore a bilingual activewear concept catalog by VYB Web Design Studio. Illustrative products and prices.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MOVEFORM — Activewear | VYB Concept Catalog">
+  <meta property="og:description" content="Explore a bilingual activewear concept catalog by VYB Web Design Studio. Illustrative products and prices.">
+  <link rel="icon" href="assets/mark.png">
+  <link rel="canonical" href="https://lucayuale.github.io/Indumentaria-demo/">
+  <meta property="og:image" content="https://lucayuale.github.io/Indumentaria-demo/assets/hero.webp">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./config.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip" data-i18n="skip"></a>
+  <header class="header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#home" data-brand></a>
+      <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" hidden>
+        <span data-i18n="menu"></span><i aria-hidden="true"></i>
+      </button>
+      <nav id="main-nav">
+        <a href="#home" data-i18n="home"></a>
+        <a href="#catalog" data-audience="women" data-i18n="women"></a>
+        <a href="#catalog" data-audience="men" data-i18n="men"></a>
+        <a href="#collections" data-i18n="collections"></a>
+        <a href="#about" data-i18n="about"></a>
+        <a href="#contact" data-i18n="contact"></a>
+      </nav>
+      <div class="languages" role="group"><button type="button" lang="en" data-lang="en">EN</button><button type="button" lang="es" data-lang="es">ES</button></div>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section id="home" class="hero" aria-labelledby="title">
+      <img id="hero-image" width="1536" height="1024" fetchpriority="high" alt="">
+      <div class="shell hero-copy">
+        <p class="eyebrow" data-i18n="heroLabel"></p>
+        <h1 id="title" data-i18n="heroTitle"></h1>
+        <p class="hero-lede" data-i18n="heroBody"></p>
+        <div class="actions">
+          <a class="button primary" href="#catalog" data-audience="" data-i18n="explore"></a>
+          <a class="button outline" href="#catalog" data-audience="women" data-i18n="shopWomen"></a>
+          <a class="button outline" href="#catalog" data-audience="men" data-i18n="shopMen"></a>
+        </div>
+      </div>
+    </section>
+    <section id="collections" class="shell section reveal" aria-labelledby="collections-title">
+      <div class="section-head">
+        <h2 id="collections-title" data-i18n="collectionsTitle"></h2>
+        <p data-i18n="collectionsBody"></p>
+      </div>
+      <div id="collections-grid" class="collections-grid"></div>
+    </section>
+    <section id="catalog" class="catalog section" aria-labelledby="catalog-title">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2 id="catalog-title" data-i18n="catalogTitle"></h2>
+          <p data-i18n="catalogBody"></p>
+        </div>
+        <div class="filters">
+          <label><span data-i18n="audience"></span><select id="audience"></select></label>
+          <label><span data-i18n="collections"></span><select id="collection"></select></label>
+          <label><span data-i18n="sort"></span><select id="sort"></select></label>
+          <button id="reset" type="button" class="quiet-button" data-i18n="reset"></button>
+        </div>
+        <p id="catalog-status" class="result-status" role="status"></p>
+        <div id="products" class="products"></div>
+      </div>
+    </section>
+    <section id="about" class="about reveal" aria-labelledby="about-title">
+      <img id="about-image" width="768" height="1024" loading="lazy" decoding="async" alt="">
+      <div class="about-copy">
+        <p class="eyebrow" data-i18n="about"></p>
+        <h2 id="about-title" data-i18n="aboutTitle"></h2>
+        <p data-i18n="aboutBody"></p>
+        <a class="button primary" href="#catalog" data-audience="" data-i18n="explore"></a>
+      </div>
+    </section>
+    <section id="contact" class="shell contact section reveal" aria-labelledby="contact-title">
+      <h2 id="contact-title" data-i18n="contactTitle"></h2>
+      <p id="contact-note"></p>
+      <div class="actions" id="contact-links"></div>
+    </section>
+  </main>
+  <footer>
+    <div class="shell footer-inner">
+      <a href="#home" class="wordmark" data-brand></a>
+      <nav id="footer-nav"></nav>
+      <div id="socials" class="actions"></div>
+      <p id="demo-note" data-i18n="demo"></p>
+      <a id="credit" data-i18n="credit"></a>
+    </div>
+  </footer>
+  <dialog id="detail" aria-labelledby="detail-title">
+    <div class="detail-layout">
+      <img id="detail-image" width="560" height="560" alt="">
+      <div class="detail-copy">
+        <form method="dialog"><button type="submit" id="close-detail" class="quiet-button" data-i18n="close"></button></form>
+        <p id="detail-audience" class="eyebrow"></p>
+        <h2 id="detail-title"></h2>
+        <p id="detail-description"></p>
+        <p id="detail-price" class="detail-price"></p>
+        <p id="detail-color"></p>
+        <label id="size-field"><span data-i18n="size"></span><select id="size"></select></label>
+        <p id="detail-note"></p>
+        <a id="detail-contact" class="button primary" data-i18n="productContact" hidden></a>
+      </div>
+    </div>
+  </dialog>
+  <noscript><p class="shell">Enable JavaScript to browse the catalog. / Activá JavaScript para explorar el catálogo.</p></noscript>
+</body>
+</html>
